@@ -193,12 +193,90 @@ footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--m
 .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; padding: 4rem 0; }
-  .mountain-card { min-height: 300px; }
+  .shell { width: min(100% - 1.25rem, 1120px); }
+
+  .site-header { position: sticky; }
+
+  .nav {
+    min-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.65rem 0 0.55rem;
+  }
+
+  .brand { align-self: flex-start; font-size: 1rem; }
+  .brand img { width: 34px; height: 34px; }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding: 0 0 0.15rem;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    min-height: 44px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.88rem;
+    scroll-snap-align: start;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 3rem 0;
+  }
+
+  h1 { font-size: clamp(2.75rem, 14vw, 4.25rem); }
+  h2 { font-size: clamp(1.9rem, 10vw, 2.75rem); }
+  .lead { font-size: 1rem; }
+  .actions { margin-top: 1.4rem; }
+  .mountain-card { min-height: 280px; border-radius: 1.5rem; }
+  .weather-chip { left: 0.85rem; right: 0.85rem; top: 0.85rem; }
+  .weather-chip strong { font-size: 1.65rem; }
+
+  .section { padding: 3.25rem 0; }
   .grid, .feature-grid, .language-section, .store-section { grid-template-columns: 1fr; }
+  .grid { gap: 0.75rem; margin-top: 1.35rem; }
+  .card { padding: 1.15rem; border-radius: 1.1rem; }
+  .feature-grid .card { padding: 1rem 1.1rem; }
+  .source-list { margin-top: 1.35rem; }
   .source-list div { grid-template-columns: 1fr; gap: 0.2rem; }
-  .nav { align-items: flex-start; padding: 1rem 0; }
-  .nav-links { justify-content: flex-end; gap: 0.7rem; }
+  .store-section { margin-bottom: 3rem; padding: 1.5rem; border-radius: 1.5rem; }
+  .legal { padding: 3rem 0; }
+  footer { padding-bottom: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .actions .button,
+  .store-section .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .store-section .button { margin-right: 0; }
+
+  .footer-row,
+  .footer-links {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
