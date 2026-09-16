@@ -8,14 +8,18 @@
   <meta property="og:description" content="Ski-specific forecasts, elevations, rankings, and resort facts in one calm iPhone app.">
   <meta property="og:type" content="website">
   <title>SnowSignal — Ski snow forecasts</title>
+  <link rel="icon" type="image/png" href="snow-signal-logo.png">
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◆</span>SnowSignal</a>
+      <a class="brand" href="index.html"><img src="snow-signal-logo.png" alt="">SnowSignal</a>
       <div class="nav-links">
         <a href="#features">Features</a>
+        <a href="#live">Live mountain</a>
+        <a href="#sources">Data</a>
+        <a href="#app-store">App Store</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
       </div>
@@ -30,11 +34,12 @@
         <p class="lead">SnowSignal brings ski-specific mountain forecasts, clear elevation views, and worldwide resort discovery together—without turning the mountain into a generic weather dashboard.</p>
         <div class="actions">
           <a class="button primary" href="#features">Explore SnowSignal</a>
-          <a class="button" href="support.html">Contact support</a>
+          <a class="button" href="#app-store">App Store availability</a>
         </div>
         <p><span class="status">In development for iPhone</span></p>
       </div>
-      <div class="mountain-card" role="img" aria-label="Abstract snow-covered mountain">
+      <div class="mountain-card">
+        <img class="hero-logo" src="snow-signal-logo.png" alt="SnowSignal mountain logo">
         <div class="weather-chip">
           <span>Mountain forecast</span>
           <strong>Base · Mid · Top</strong>
@@ -46,27 +51,93 @@
     <section class="section shell" id="features">
       <p class="eyebrow">Built for the question skiers ask</p>
       <h2>Where will the snow be?</h2>
-      <p class="section-intro">SnowSignal separates real ski resorts from larger ski areas, keeps terrain facts ski-only, and shows the forecast at useful mountain elevations.</p>
-      <div class="grid">
+      <p class="section-intro">Search a worldwide catalog of ski resorts and larger ski areas, understand the mountain from village to summit, and decide where to ski from visible facts rather than a mystery score.</p>
+      <div class="grid feature-grid">
         <article class="card">
           <h3>Mountain-first forecasts</h3>
-          <p>Compare snow, temperature, wind, rain, freezing level, and visibility at Base, Middle, and Top elevations.</p>
+          <p>Daily and hourly views for Base, Middle, and Top, with snowfall, rain, temperature, apparent temperature, precipitation chance, wind, gusts, freezing level, visibility, clouds, sunshine, sunrise, and sunset.</p>
+        </article>
+        <article class="card">
+          <h3>Five or sixteen days</h3>
+          <p>Plan with a focused five-day forecast or unlock the full sixteen-day Premium outlook, all derived from the same consistent mountain forecast.</p>
         </article>
         <article class="card">
           <h3>Worldwide discovery</h3>
-          <p>Search a global ski catalog, save favorites, and compare transparent five-day and sixteen-day snow outlooks.</p>
+          <p>Search by resort, locality, region, or country; distinguish individual Ski Resorts from connected Ski Areas; and open verified included-resort pages.</p>
         </article>
         <article class="card">
-          <h3>Honest resort data</h3>
-          <p>Skiable lifts, slopes, and kilometers stay separate from hiking, Nordic, touring, sledding, and ordinary transport data.</p>
+          <h3>Rank and compare</h3>
+          <p>Compare favorites and worldwide rankings by expected snow, current temperature, skiable distance, difficulty, vertical, and ski lifts—with missing data left out, not guessed.</p>
+        </article>
+        <article class="card">
+          <h3>Your resorts</h3>
+          <p>Save and reorder favorite mountains on your device, see their closest current temperature, and compare the resorts that matter to your next trip.</p>
+        </article>
+        <article class="card">
+          <h3>Complete resort pages</h3>
+          <p>See elevations, terrain and lift facts, licensed resort imagery, nearby resorts, included sectors, official resort websites, provider attribution, and clear update times in one place.</p>
         </article>
       </div>
     </section>
 
-    <section class="section shell">
+    <section class="section shell" id="live">
+      <p class="eyebrow">See the mountain now</p>
+      <h2>Live feeds, webcams, and terrain.</h2>
+      <p class="section-intro">Availability varies by mountain and provider. SnowSignal shows a live card only when a supported report is current and confidently matched to the right resort.</p>
+      <div class="grid">
+        <article class="card highlight-card">
+          <span class="card-kicker">Live operations</span>
+          <h3>Lift and resort status</h3>
+          <p>Where available: operating status, open and total lifts and pistes, reported base and summit snow depth, avalanche risk, season dates, and the source report time.</p>
+        </article>
+        <article class="card highlight-card">
+          <span class="card-kicker">Mountain cameras</span>
+          <h3>Nearby webcams</h3>
+          <p>Windy webcam previews, locations, distance, live views, and daytime timelapses appear where provider coverage and production configuration allow.</p>
+        </article>
+        <article class="card highlight-card">
+          <span class="card-kicker">Maps</span>
+          <h3>3D terrain and piste maps</h3>
+          <p>Explore a realistic-elevation 3D terrain map with resort and webcam markers, then open the OpenSkiMap piste map centered on the resort's mapped OpenSkiData footprint.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell language-section">
+      <div>
+        <p class="eyebrow">Made for worldwide ski travel</p>
+        <h2>26 languages. Local mountain context.</h2>
+        <p class="section-intro">SnowSignal localizes resort discovery, forecasts, weather terms, units, country names, rankings, and Premium information. Hebrew and Arabic include right-to-left layouts.</p>
+      </div>
+      <div class="language-cloud" aria-label="Supported language highlights">
+        <span>English</span><span>Deutsch</span><span>Français</span><span>Italiano</span>
+        <span>Español</span><span>日本語</span><span>한국어</span><span>עברית</span>
+        <span>العربية</span><span>中文</span><span>Português</span><span>+ 15 more</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="sources">
       <p class="eyebrow">Data principles</p>
       <h2>Useful, current, and attributed.</h2>
-      <p class="section-intro">Forecasts are cached to reduce provider load and clearly carry their update time. Missing or stale information is never invented. Weather data is attributed to <a href="https://open-meteo.com/">Open-Meteo</a>; resort catalog data includes OpenStreetMap and OpenSkiData attribution in the app.</p>
+      <p class="section-intro">Forecasts are cached to reduce provider load and carry their update time. Missing, stale, unsupported, or uncertain information is hidden or clearly labeled—never invented.</p>
+      <div class="source-list">
+        <div><strong>Mountain weather</strong><span><a href="https://open-meteo.com/">Open-Meteo</a> for elevation-aware forecasts and worldwide ranking weather.</span></div>
+        <div><strong>Resorts and pistes</strong><span><a href="https://openskidata.org/">OpenSkiData</a>, <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, <a href="https://openskimap.org/">OpenSkiMap</a>, Skimap.org, Who's On First, and Mapterhorn, with curated official-source corrections.</span></div>
+        <div><strong>Maps and imagery</strong><span>Apple Maps for realistic-elevation terrain; licensed resort imagery and attributed Wikimedia Commons photography where available.</span></div>
+        <div><strong>Live resort feeds</strong><span>Current eligible reports from open·piste, Fnugg, and Lumiplan. Liftie support remains pending provider approval and is not required for launch.</span></div>
+        <div><strong>Webcams</strong><span><a href="https://www.windy.com/webcams">Windy Webcams</a>, shown only where the production API and nearby camera coverage are available.</span></div>
+      </div>
+    </section>
+
+    <section class="section shell store-section" id="app-store">
+      <img src="snow-signal-logo.png" alt="" class="store-logo">
+      <div>
+        <p class="eyebrow">SnowSignal for iPhone</p>
+        <h2>Coming to the App Store.</h2>
+        <p class="section-intro">SnowSignal is still in development. The direct App Store download link and final product screenshots will appear here when the release listing is ready.</p>
+        <span class="button disabled" aria-disabled="true">App Store link coming at launch</span>
+        <a class="button" href="support.html">Contact support</a>
+      </div>
     </section>
   </main>
 
