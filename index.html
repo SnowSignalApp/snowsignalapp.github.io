@@ -19,6 +19,7 @@
         <a href="#features">Features</a>
         <a href="#live">Live mountain</a>
         <a href="#sources">Data</a>
+        <a href="#freshness">Freshness</a>
         <a href="#app-store">App Store</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
@@ -126,6 +127,17 @@
         <div><strong>Maps and imagery</strong><span>Apple Maps for realistic-elevation terrain; licensed resort imagery and attributed Wikimedia Commons photography where available.</span></div>
         <div><strong>Live resort feeds</strong><span>Current eligible reports from open·piste, Fnugg, and Lumiplan. Liftie support remains pending provider approval and is not required for launch.</span></div>
         <div><strong>Webcams</strong><span><a href="https://www.windy.com/webcams">Windy Webcams</a>, shown only where the production API and nearby camera coverage are available.</span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="freshness">
+      <p class="eyebrow">Know what you are looking at</p>
+      <h2>Freshness is visible, not assumed.</h2>
+      <p class="section-intro">SnowSignal refreshes its shared weather cache on a six-hour schedule and shows when weather and rankings were updated and when the next update is expected. Current temperature advances through the nearest cached hourly point, so it does not stay frozen at the download time.</p>
+      <div class="grid">
+        <article class="card"><h3>Forecasts</h3><p>Five- and sixteen-day views share one cached forecast. Bounded older data is clearly marked stale during a provider interruption.</p></article>
+        <article class="card"><h3>Rankings</h3><p>Worldwide snow rankings use one atomic Middle-elevation snapshot, refreshed four times daily rather than by every visitor.</p></article>
+        <article class="card"><h3>Live data</h3><p>Lift status and webcams have separate provider timestamps and availability. One unavailable feed does not make the rest of a resort page unavailable.</p></article>
       </div>
     </section>
 
