@@ -18,12 +18,14 @@
   <main class="legal">
     <p class="eyebrow">SnowSignal</p>
     <h1>Privacy policy</h1>
-    <p class="updated">Effective September 16, 2026</p>
+    <p class="updated">Development policy updated October 5, 2026</p>
     <p>SnowSignal is designed to work without a customer account. This policy describes the current app and website while they are in development and will be updated if the data practices change before release.</p>
 
     <h2>Information SnowSignal handles</h2>
     <ul>
-      <li>Favorite resorts, units, language, forecast preferences, and Premium state are stored on your device.</li>
+      <li>Favorite resorts, units, language and forecast preferences are stored on your device. Paid Premium access is evaluated from verified Apple transactions; any complimentary preview is a separate server-verified grant.</li>
+      <li>To offer a complimentary Premium preview without signup, the app sends an Apple-signed app transaction to SnowSignal for verification. The service stores a hash of its app-specific transaction identifier and the preview start and expiry times, not your Apple email or password. This record prevents repeat previews after reinstalling with the same Apple Account. Raw signed transactions are not stored in the eligibility table or intentionally logged.</li>
+      <li>When server-side paid verification is enabled, SnowSignal also uses the verified app-specific identity to ask Apple for current subscription status. Its short-lived access cache stores a hashed identity/configuration key, check time and access expiry, not raw signed proofs, payment details or your Apple email. Subscription prices and app updates do not reset an existing paid period.</li>
       <li>When the app contacts the SnowSignal service, hosting infrastructure may process standard request information such as IP address, request time, route, device network information, and diagnostic logs for security and reliability.</li>
       <li>SnowSignal sends resort coordinates and requested forecast settings—not your identity—to weather providers through its backend.</li>
       <li>The current consumer app does not request precise device location, contacts, photos, advertising identifiers, or payment-card details.</li>
@@ -33,13 +35,18 @@
     <p>The consumer app does not currently require an account. Sign in with Apple is limited to authorized owner administration. If subscriptions launch, Apple will process purchases; SnowSignal will not receive your full payment-card details.</p>
 
     <h2>Providers and hosting</h2>
-    <p>SnowSignal uses service providers for hosting, forecasts, resort data, imagery, and optional live operating status. These providers process only the data necessary to deliver their service and are subject to their own policies. Provider requests are cached to reduce data transfer and unnecessary repeated processing.</p>
+    <p>SnowSignal uses service providers for hosting, forecasts, resort data, imagery, maps, and optional live operating status. These providers process data under their own policies. When you choose to open a piste map, the original OpenSkiMap website loads in an in-app Safari browser and receives a direct request from your device. SnowSignal cannot read your activity in that browser. The native resort map uses Apple MapKit. SnowSignal caches applicable backend provider requests to reduce unnecessary repeated processing; it does not cache the third-party map website.</p>
 
     <h2>Analytics, advertising, and tracking</h2>
     <p>The current app does not include a third-party advertising or cross-app tracking SDK. SnowSignal does not sell personal information. Any future analytics or advertising change will require a policy and App Privacy update before release.</p>
 
     <h2>Retention and deletion</h2>
-    <p>Deleting the app removes locally stored customer preferences and favorites. Operational server logs are retained only as needed for security, debugging, and reliable operation according to the hosting configuration. Contact support with a privacy question or deletion request relating to server-side information.</p>
+    <p>If you enable forecast alerts, SnowSignal sends your APNs device token, selected resort IDs, alert choices, language, units, timezone and quiet hours to its service over an encrypted connection. Tokens are encrypted at rest and used only to send your requested alerts through Apple. A random installation credential protects changes to your subscription. Raw signed Apple verification transactions are not retained in the alert subscription.</p>
+    <p>Disabling alerts and syncing with the service deletes the subscription and its alert history. If offline, deletion waits until the next successful sync. Alert records are scheduled for deletion after 30 days and subscriptions without a successful sync after 90 days through the service’s regular cleanup cycle, even when delivery is disabled. Notification permission can also be disabled in iPhone Settings. Uninstalling does not immediately notify the server; Apple token invalidation or retention cleanup removes the remaining subscription. Backup retention may outlast deletion from the active database.</p>
+    <p>Complimentary-preview eligibility records remain while the preview program operates, including after expiry or uninstall, to prevent duplicate grants. These records are included in database backups. They are not used for advertising or cross-app tracking. Contact support about server-side deletion; deleting local app data does not delete server eligibility history.</p>
+    <p>Paid-verification cache decisions are valid for no more than 60 seconds and never beyond verified access expiry; negative decisions are cached for 15 seconds. Cache records are scheduled for removal after 24 hours beyond cache validity through the six-hour cleanup cycle. This cleanup does not delete preview eligibility history. Backups may retain deleted records until their actual expiry.</p>
+    <p>Local preferences can also exist in device backups or shared widget storage. Removing the app is not a request to delete server records or cancel an Apple subscription. Operational server logs are retained according to the actual hosting configuration; production retention and recovery settings will be confirmed before public launch. Contact support privately with a privacy question or deletion request relating to server-side information.</p>
+    <p>Support emails and optional redacted screenshots are used to investigate and respond to your request, not for advertising. Do not send passwords, verification codes, payment details, installation credentials or Apple-signed transaction proofs. Server-side requests may require secure identity verification; an email address alone cannot identify the app's hashed eligibility record. We do not promise immediate self-service deletion or removal from backups before their verified expiry.</p>
 
     <h2>Children and safety</h2>
     <p>SnowSignal is not directed to children under 13. Forecasts and resort data are informational and are not a substitute for official avalanche, closure, patrol, or emergency guidance.</p>
