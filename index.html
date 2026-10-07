@@ -17,9 +17,8 @@
       <a class="brand" href="index.html"><img src="snow-signal-logo.png" alt="">SnowSignal</a>
       <div class="nav-links">
         <a href="#features">Features</a>
-        <a href="#live">Live mountain</a>
+        <a href="#live">Maps</a>
         <a href="#sources">Data</a>
-        <a href="#freshness">Freshness</a>
         <a href="#app-store">App Store</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
@@ -76,7 +75,7 @@
         </article>
         <article class="card">
           <h3>Complete resort pages</h3>
-          <p>See forecasts, historical patterns, terrain, lifts, webcams, maps, and official links.</p>
+          <p>See forecasts, historical patterns, terrain, lifts, maps, and official links.</p>
         </article>
         <article class="card">
           <h3>Choose the forecast model</h3>
@@ -94,26 +93,20 @@
     </section>
 
     <section class="section shell" id="live">
-      <p class="eyebrow">See the mountain now</p>
-      <h2>Live feeds, webcams, and terrain.</h2>
-      <p class="section-intro">Availability varies by mountain and provider. SnowSignal shows a live card only when a supported report is current and confidently matched to the right resort.</p>
+      <p class="eyebrow">Explore the terrain</p>
+      <h2>Maps and resort context.</h2>
+      <p class="section-intro">Use mapped terrain and official resort links alongside the forecast. Mapped figures may differ from official totals.</p>
       <div class="grid">
-        <article class="card highlight-card">
-          <span class="card-kicker">Live operations</span>
-          <h3>Lift and resort status</h3>
-          <p>Where available: operating status, open and total lifts and pistes, reported base and summit snow depth, avalanche risk, season dates, and the source report time.</p>
+        <article class="card">
+          <h3>Terrain maps</h3>
+          <p>Explore Apple Maps terrain, then open the original attributed OpenSkiMap website near the resort.</p>
         </article>
-        <article class="card highlight-card">
-          <span class="card-kicker">Mountain cameras</span>
-          <h3>Nearby webcams</h3>
-          <p>Windy webcam previews, locations, distance, live views, and daytime timelapses appear where provider coverage and production configuration allow.</p>
-        </article>
-        <article class="card highlight-card">
-          <span class="card-kicker">Maps</span>
-          <h3>3D terrain and piste maps</h3>
-          <p>Explore a realistic-elevation 3D terrain map with resort and webcam markers, then open the OpenSkiMap piste map centered on the resort's mapped OpenSkiData footprint.</p>
+        <article class="card">
+          <h3>Paper-map archives</h3>
+          <p>Open available Skimap.org archive links on their original website. Archive maps may be old and are not guaranteed current or official.</p>
         </article>
       </div>
+      <p>Optional live resort reports and webcams remain unavailable for public release while provider permissions are pending.</p>
     </section>
 
     <section class="section shell language-section">
@@ -136,21 +129,8 @@
       <div class="source-list">
         <div><strong>Mountain weather</strong><span><a href="https://open-meteo.com/">Open-Meteo</a> for elevation-aware forecasts and worldwide ranking weather.</span></div>
         <div><strong>Historical statistics</strong><span>Copernicus ERA5 modelled averages near each resort centre for snow, rain, and clear dry days.</span></div>
-        <div><strong>Resorts and pistes</strong><span><a href="https://openskidata.org/">OpenSkiData</a>, <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, <a href="https://openskimap.org/">OpenSkiMap</a>, Skimap.org, Who's On First, and Mapterhorn, with curated official-source corrections.</span></div>
-        <div><strong>Maps and imagery</strong><span>Apple Maps for realistic-elevation terrain; licensed resort imagery and attributed Wikimedia Commons photography where available.</span></div>
-        <div><strong>Live resort feeds</strong><span>Current eligible reports from open·piste, Fnugg, and Lumiplan. Liftie support remains pending provider approval and is not required for launch.</span></div>
-        <div><strong>Webcams</strong><span><a href="https://www.windy.com/webcams">Windy Webcams</a>, shown only where the production API and nearby camera coverage are available.</span></div>
-      </div>
-    </section>
-
-    <section class="section shell" id="freshness">
-      <p class="eyebrow">Know what you are looking at</p>
-      <h2>Freshness is visible, not assumed.</h2>
-      <p class="section-intro">SnowSignal refreshes its shared weather cache on a six-hour schedule and shows when weather and rankings were updated and when the next update is expected. Current temperature advances through the nearest cached hourly point, so it does not stay frozen at the download time.</p>
-      <div class="grid">
-        <article class="card"><h3>Forecasts</h3><p>Five- and sixteen-day views share one cached forecast. Bounded older data is clearly marked stale during a provider interruption.</p></article>
-        <article class="card"><h3>Rankings</h3><p>Worldwide snow rankings use one atomic Middle-elevation snapshot, refreshed four times daily rather than by every visitor.</p></article>
-        <article class="card"><h3>Live data</h3><p>Lift status and webcams have separate provider timestamps and availability. One unavailable feed does not make the rest of a resort page unavailable.</p></article>
+        <div><strong>Resorts and pistes</strong><span><a href="data.html">Catalogue download, source credits and licences</a>, with curated official-source corrections.</span></div>
+        <div><strong>Maps and imagery</strong><span>Apple Maps terrain and original SnowSignal artwork. Third-party resort photographs require individual review before release.</span></div>
       </div>
     </section>
 
