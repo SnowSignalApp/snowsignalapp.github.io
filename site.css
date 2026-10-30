@@ -150,10 +150,10 @@ h3 { margin: 0 0 0.6rem; font-size: 1.15rem; }
 
 .section { padding: 5rem 0; }
 .section-intro { max-width: 720px; color: var(--muted); }
-.screenshot-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(0.75rem, 3vw, 2rem); margin-top: 2rem; }
-.screenshot-gallery figure { min-width: 0; margin: 0; text-align: center; }
-.screenshot-gallery img { display: block; width: 100%; max-width: 230px; height: auto; margin: 0 auto; border-radius: 1.25rem; box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3); }
-.screenshot-gallery figcaption { margin-top: 0.75rem; color: var(--muted); font-size: 0.9rem; }
+.screenshot-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.screenshot-gallery figure { min-width: 0; margin: 0; padding: 0.65rem 0.65rem 0.9rem; border-radius: 1.15rem; background: rgba(17, 42, 60, 0.72); text-align: center; }
+.screenshot-gallery img { display: block; width: 100%; max-width: 230px; height: auto; margin: 0 auto; border-radius: 0.8rem; box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28); }
+.screenshot-gallery figcaption { margin-top: 0.7rem; color: var(--ink); font-size: 0.9rem; font-weight: 650; line-height: 1.3; }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
 .feature-grid { grid-template-columns: repeat(3, 1fr); }
 .feature-grid .card { padding: 1.15rem 1.25rem; }
@@ -256,8 +256,7 @@ footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--m
   .weather-chip strong { font-size: 1.65rem; }
 
   .section { padding: 3.25rem 0; }
-  .screenshot-gallery { display: flex; gap: 1rem; overflow-x: auto; padding: 0 0 1rem; scroll-snap-type: x mandatory; }
-  .screenshot-gallery figure { flex: 0 0 min(45vw, 210px); scroll-snap-align: start; }
+  .screenshot-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1.4rem; }
   .grid, .feature-grid, .language-section, .store-section { grid-template-columns: 1fr; }
   .grid { gap: 0.75rem; margin-top: 1.35rem; }
   .card { padding: 1.15rem; border-radius: 1.1rem; }
