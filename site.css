@@ -181,6 +181,36 @@ h3 { margin: 0 0 0.6rem; font-size: 1.15rem; }
 .guide-callout { margin: 2.5rem 0; padding: 1.5rem; border-radius: 1rem; background: rgba(22, 54, 76, 0.85); }
 .guide-callout p { margin-bottom: 0; }
 .guide .guide-meta { margin: 0 0 1rem; color: var(--ice); font-size: 0.9rem; }
+.resort-library-section { display: flex; align-items: end; justify-content: space-between; gap: 2rem; padding: 3rem; border: 1px solid var(--line); border-radius: 1.5rem; background: linear-gradient(135deg, rgba(18, 53, 76, 0.9), rgba(9, 25, 38, 0.82)); }
+.resort-library-section h2 { max-width: 18ch; }
+.resort-library-section .button { flex: 0 0 auto; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 2rem; color: var(--muted); font-size: 0.9rem; }
+.breadcrumbs a { color: var(--ice); text-underline-offset: 0.18em; }
+.resort-directory, .resort-page { padding: 4.5rem 0 6rem; }
+.resort-directory h1, .resort-page h1 { max-width: 16ch; font-size: clamp(2.75rem, 6vw, 5.4rem); }
+.directory-controls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr); gap: 1rem; margin-top: 2.5rem; }
+.directory-controls label { display: grid; gap: 0.45rem; color: var(--muted); font-size: 0.9rem; font-weight: 700; }
+.directory-controls input, .directory-controls select { width: 100%; min-height: 48px; padding: 0.65rem 0.85rem; border: 1px solid var(--line); border-radius: 0.8rem; color: var(--ink); background: rgba(4, 16, 26, 0.78); font: inherit; }
+.directory-controls input:focus, .directory-controls select:focus { outline: 2px solid var(--ice); outline-offset: 2px; }
+.directory-count, .directory-note { color: var(--muted); }
+.directory-count { margin: 1.5rem 0 0.8rem; }
+.resort-directory-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
+.resort-directory-item a { display: grid; gap: 0.2rem; min-height: 88px; padding: 1rem; border: 1px solid var(--line); border-radius: 0.85rem; color: var(--ink); background: rgba(14, 35, 52, 0.62); text-decoration: none; }
+.resort-directory-item a:hover, .resort-directory-item a:focus-visible { border-color: var(--ice); background: rgba(22, 54, 76, 0.9); }
+.resort-directory-item span { color: var(--muted); font-size: 0.88rem; }
+.resort-hero { display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: clamp(2rem, 6vw, 5rem); }
+.resort-location { margin: 0 0 0.75rem; color: var(--ice); font-size: 1rem; font-weight: 700; }
+.resort-fact-panel { display: grid; gap: 0.7rem; padding: 1.5rem; border-radius: 1.25rem; background: rgba(17, 42, 60, 0.78); box-shadow: var(--shadow); }
+.resort-fact-panel span { color: var(--muted); }
+.resort-fact-panel strong { font-size: 1.25rem; line-height: 1.35; }
+.resort-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 4rem 0; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+.resort-facts div { display: grid; gap: 0.35rem; padding: 1.25rem; background: rgba(7, 19, 31, 0.95); }
+.resort-facts span, .resort-content p, .resort-links p { color: var(--muted); }
+.resort-facts strong { font-size: 1.35rem; }
+.resort-content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 5vw, 4rem); }
+.resort-content h2, .resort-links h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.text-link { display: inline-block; margin-top: 0.4rem; font-weight: 700; text-underline-offset: 0.2em; }
+.resort-links { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--line); }
 .card-kicker { display: block; margin-bottom: 0.65rem; color: var(--ice); font-size: 0.75rem; font-weight: 760; letter-spacing: 0.12em; text-transform: uppercase; }
 .highlight-card { background: linear-gradient(155deg, rgba(25, 61, 86, 0.92), var(--panel)); }
 .status { display: inline-block; padding: 0.25rem 0.65rem; border-radius: 999px; color: var(--ice); background: rgba(57, 183, 244, 0.12); font-size: 0.82rem; }
@@ -277,6 +307,13 @@ footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--m
   .guide-links { grid-template-columns: 1fr; gap: 0.75rem; margin-top: 1.4rem; }
   .guide-links a { min-height: 0; padding: 1.25rem; }
   .guide { padding: 3rem 0 4rem; }
+  .resort-library-section { display: grid; align-items: start; gap: 1.25rem; padding: 1.5rem; border-radius: 1.15rem; }
+  .resort-library-section h2 { max-width: none; }
+  .resort-directory, .resort-page { padding: 3rem 0 4rem; }
+  .directory-controls, .resort-hero, .resort-facts, .resort-content { grid-template-columns: 1fr; }
+  .resort-directory-list { grid-template-columns: 1fr; }
+  .resort-facts { gap: 1px; margin: 2.5rem 0; }
+  .resort-content { gap: 2rem; }
   .grid, .feature-grid, .language-section, .store-section { grid-template-columns: 1fr; }
   .grid { gap: 0.75rem; margin-top: 1.35rem; }
   .card { padding: 1.15rem; border-radius: 1.1rem; }
